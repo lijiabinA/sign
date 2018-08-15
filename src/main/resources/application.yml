@@ -9,6 +9,10 @@ spring:
   jpa:
     database-platform: com.enigmabridge.hibernate.dialect.SQLiteDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
-
+  freemarker:
+    request-context-attribute: request
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
